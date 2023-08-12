@@ -22,7 +22,7 @@ while True:
 
         if valor > 0:
             saldo += valor
-            extrato += f"\n Depósito: R$ {valor:.2f}"
+            extrato += f"\n Depósito: +R$ {valor:.2f}"
 
         else:
             print("A operação falhou! Valor não informado.")
@@ -46,7 +46,7 @@ while True:
                 print("A operação falhou! Número máximo de saques excedido.")
 
             saldo -= valor
-            extrato += f"\n Saque: R$ {valor:.2f}"
+            extrato += f"\n Saque: -R$ {valor:.2f}"
             numero_saques += 1
         
         else:
@@ -55,7 +55,7 @@ while True:
     elif opcao == "e":
         print("\n ================= EXTRATO ================= \n")
         print(" Não foram realizadas movimentações." if not extrato else extrato)
-        print(f"\n Saldo: R# {saldo:.2f}\n")
+        print(f"\n Saldo Atual: R# {saldo:.2f}\n")
         print("=============================================")
 
     elif  opcao == "q":
